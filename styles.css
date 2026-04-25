@@ -168,7 +168,6 @@ body.home::before {
   font-weight: 900;
   font-size: 60px;
 
-
 }
 
 .luna {
@@ -222,7 +221,7 @@ body.home::before {
 .galeria-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 500px);
+  grid-template-rows: repeat(2, 450px);
   gap: 15px;
 }
 
@@ -251,14 +250,14 @@ body.home::before {
 
 .vida-zoe {
   top: 5%; 
-  /* left: 0%;   */
+  
   padding: 10px;
   text-align: justify;
   max-width: 1500px;
   margin: 60px auto;
   line-height: 180%;
   font-size: 25px;
-  /* background-color: rgb(214, 184, 163) ; */
+ 
 }
 
 .cat-gov {
@@ -266,7 +265,7 @@ body.home::before {
   top: 30px;
   left: 50%;
   transform: translateX(-50%);
-  width: 30vh;
+  width: 20vh;
   height: 10vw;
   z-index: 100;  
 }
@@ -284,7 +283,7 @@ body.home::before {
 }
 
 .voltar img {
-  width: 80%;
+  width: 70%;
   height: auto;
   display: block;
   margin-bottom: 6px;
@@ -293,7 +292,7 @@ body.home::before {
 .voltar .legenda {
   position:relative;
   bottom: 60px;
-  /* 30px acima da imagem */
+  
   left: 100%; 
   transform: translateX(-50%);
   font-size: 16px;
@@ -320,15 +319,11 @@ body.home::before {
   text-align: center;
   cursor: pointer;
   z-index: 10;
-  /* position:relative;
-  bottom: 50px;
-  right: 30px;
-  z-index: 1000;
-  cursor: pointer; */
+ 
 }
 
 .link-whatsapp img {
-  height: 90px;
+  height: 100px;
   display: block;
 
 
@@ -451,14 +446,14 @@ body.home::before {
 
 .vida-zoe {
   top: 5%; 
-  /* left: 0%;   */
+  
   padding: 10px;
   text-align: justify;
   max-width: 300px;
   margin: 60px auto;
   line-height: 180%;
   font-size: 20px;
-  /* background-color: rgb(214, 184, 163) ; */
+  
 }
 
 .cat-gov {
@@ -466,7 +461,7 @@ body.home::before {
   top: 30px;
   left: 50%;
   transform: translateX(-50%);
-  width: 30vh;
+  width: 20vh;
   height: 20vw;
   z-index: 100;  
 }
@@ -479,8 +474,33 @@ body.home::before {
 .galeria-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 500px);
+  grid-template-rows: repeat(2, 200px);
   gap: 15px;
+}
+
+.voltar img {
+  width: 40%;
+  height: auto;
+  display: block;
+  margin-bottom: 6px;
+}
+.link-whatsapp {
+  position:relative;
+  bottom: 30px;
+  left: 70%;
+  transform: translateX(-50%);
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 5;
+ 
+}
+
+.link-whatsapp img {
+  height: 60px;
+  display: block;
+
+
 }
 
 }
