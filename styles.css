@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body.home {
+  position: relative;
+  /* preciso para posicionar o pseudoelemento */
+  background-color: rgb(214, 184, 163);
+  overflow-x: hidden;
+  /* evita scroll horizontal */
+  /* seus demais estilos do body */
+}
+
+body.home::before {
+  content: "";
+  position: fixed;
+  /* fixa na tela */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* ocupa toda a largura da viewport */
+  height: 100vh;
+  /* ocupa toda a altura da viewport */
+  background-image: url('./img/patinhas.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  /* cobre toda a área */
+  opacity: 0.3;
+  /* deixa a imagem mais suave, ajuste como quiser */
+  pointer-events: none;
+  /* para não bloquear cliques */
+  z-index: -2;
+  /* fica na frente do fundo do body, mas atrás do conteúdo */
+}
+
+/* Fundo patinhas (atrás de tudo) */
+.fundo-pat {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* ocupa 100% da largura da viewport */
+  height: 100vh;
+  /* ocupa 100% da altura da viewport */
+  background-image: url('./img/patinhas.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  /* cobre toda a área, mantendo proporção */
+  opacity: 0.3;
+  /* deixa a imagem suave */
+  z-index: -2;
+  /* fica atrás de tudo */
+  pointer-events: none;
+  /* não bloqueia cliques */
+}
+
+/* Fundo toda.jpeg (acima das patinhas, atrás do conteúdo) */
+.fundo-toda {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 60vw;
+  height: 100vh;
+  background-image: url('./img/toda.jpeg');
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  /* Aumenta a imagem para 120% do tamanho do container */
+  background-size: 120% auto;
+  /* 120% largura, altura automática */
+
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+/* Botões */
+.meninas button {
+  position: fixed;
+  padding: 10px 20px;
+  font-size: 28px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  width: 239px;
+  height: 64px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  font-weight: 700;
+  z-index: 10;
+  pointer-events: auto;
+  transition: background-color 0.3s;
+}
+
+/* Posicionamento dos botões */
+#btn1 {
+  top: 60vh;
+  left: 25vw;
+  background-color: rgb(161, 96, 58);
+  color: white;
+}
+
+#btn2 {
+  top: 60vh;
+  left: 45vw;
+  background-color: rgb(180, 199, 129);
+  color: black;
+}
+
+#btn3 {
+  top: 60vh;
+  left: 65vw;
+  background-color: rgb(21, 12, 7);
+  color: white;
+}
+
+/* Conteúdo */
+.content {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  padding: 20px 40px;
+  text-align: center;
+  max-width: 800px;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: 20;
+  color: black;
+  background-color: rgb(214, 184, 163);
+  border-radius: 30px;
+}
+
+.content h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 22px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: black;
+}
+
+.content img {
+  width: 40px;
+  vertical-align: middle;
+  margin: 0 6px;
+}
+
+.zoe {
+  color: brown;
+  top: 20px;
+  left: 50%;
+  padding: 10px;
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 5px;
+  background: rgb(161, 96, 58);
+  color: white;
+  font-weight: 900;
+  font-size: 60px;
+
+
+}
+
+.luna {
+  color: rgb(53, 6, 221);
+  top: 20px;
+  left: 50%;
+  padding: 10px;
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 50px;
+  background: rgb(180, 199, 129);
+  color: black;
+  font-weight: 900;
+  font-size: 60px;
+
+}
+
+.pink {
+  color: rgb(218, 221, 9);
+  top: 20px;
+  left: 50%;
+  padding: 10px;
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 50px;
+  background: rgb(21, 12, 7);
+  color: white;
+  font-weight: 900;
+  font-size: 60px;
+
+}
+
+.imagem-zoe2 {
+  height: 500px;
+  top: 20px;
+  left: 50%;
+  padding: 10px;
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+
+}
+
+.galeria {
+  background: var(--bg);
+  padding: 100px 0;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 500px);
+  gap: 15px;
+}
+
+/* Primeiro item ocupa 2 colunas e 2 linhas */
+.galeria-item.grande {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.galeria-item {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  position: relative;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.galeria-item:hover img {
+  transform: scale(1.1);
+}
+
+.vida-zoe {
+  top: 5%; 
+  /* left: 0%;   */
+  padding: 10px;
+  text-align: justify;
+  max-width: 1500px;
+  margin: 60px auto;
+  line-height: 180%;
+  font-size: 25px;
+  /* background-color: rgb(214, 184, 163) ; */
+}
+
+.cat-gov {
+  position:relative;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30vh;
+  height: 10vw;
+  z-index: 100;  
+}
+
+.voltar {
+  position:relative;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+  
+}
+
+.voltar img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.voltar .legenda {
+  position:relative;
+  bottom: 60px;
+  /* 30px acima da imagem */
+  left: 100%; 
+  transform: translateX(-50%);
+  font-size: 16px;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  display: none;
+  /* esconder por padrão */
+  user-select: none;
+}
+
+.voltar:hover .legenda {
+  display: block;
+}
+
+.link-whatsapp {
+  position:relative;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+  /* position:relative;
+  bottom: 50px;
+  right: 30px;
+  z-index: 1000;
+  cursor: pointer; */
+}
+
+.link-whatsapp img {
+  height: 90px;
+  display: block;
+
+
+}
