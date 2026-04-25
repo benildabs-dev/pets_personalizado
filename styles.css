@@ -104,6 +104,12 @@ body.home::before {
   left: 25vw;
   background-color: rgb(161, 96, 58);
   color: white;
+  transition: background-color 0.3s, color 0.3s; /* suaviza a transição */
+}
+
+#btn1:hover {
+  background-color: white;
+  color: rgb(161, 96, 58);
 }
 
 #btn2 {
@@ -111,6 +117,12 @@ body.home::before {
   left: 45vw;
   background-color: rgb(180, 199, 129);
   color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#btn2:hover {
+  background-color: black;
+  color: rgb(180, 199, 129);
 }
 
 #btn3 {
@@ -118,6 +130,12 @@ body.home::before {
   left: 65vw;
   background-color: rgb(21, 12, 7);
   color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#btn3:hover {
+  background-color: white;
+  color: rgb(21, 12, 7);
 }
 
 /* Conteúdo */
